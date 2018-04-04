@@ -6,4 +6,6 @@ package com.rhy.demo.po;
  */
 public class TestPOJO {
     // 你好
+
+    //再见32131231231
 }
