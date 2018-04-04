@@ -9,8 +9,8 @@
         <module name="Weixin" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Weixin" target="1.5" />
+    <bytecodeTargetLevel target="8">
+      <module name="Weixin" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
