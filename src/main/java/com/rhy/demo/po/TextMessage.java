@@ -1,7 +1,6 @@
 package com.rhy.demo.po;
 
 public class TextMessage {
-   //测试
     private String ToUserName;  // 开发者微信号
     private String FromUserName;    // 发送方帐号（一个OpenID）
     private long CreateTime;  // 消息创建时间 （整型）
