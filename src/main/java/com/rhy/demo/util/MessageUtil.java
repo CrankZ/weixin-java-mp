@@ -1,5 +1,7 @@
 package com.rhy.demo.util;
 
+import com.rhy.demo.po.News;
+import com.rhy.demo.po.NewsMessage;
 import com.rhy.demo.po.TextMessage;
 import com.thoughtworks.xstream.XStream;
 import org.dom4j.Document;
@@ -10,14 +12,12 @@ import org.dom4j.io.SAXReader;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class MessageUtil {
 
     public static final String MESSAGE_TEXT = "text";
+    public static final String MESSAGE_NEWS = "news";
     public static final String MESSAGE_IMAGE = "image";
     public static final String MESSAGE_VOICE = "voice";
     public static final String MESSAGE_VIDEO = "video";
@@ -63,6 +63,48 @@ public class MessageUtil {
     }
 
     /**
+     * 图文消息转为xml
+     *
+     * @param newsMessage
+     * @return
+     */
+    public static String newsMessageToXml(NewsMessage newsMessage) {
+        XStream xStream = new XStream();
+        xStream.alias("xml", newsMessage.getClass());
+        xStream.alias("item", new News().getClass());
+        return xStream.toXML(newsMessage);
+    }
+
+    /**
+     * 图文消息的组装
+     * @param toUserName
+     * @param fromUserName
+     * @return
+     */
+    public static String initNewsMessage(String toUserName, String fromUserName) {
+        String message = null;
+        List<News> newsList = new ArrayList<News>();
+        NewsMessage newsMessage = new NewsMessage();
+
+        News news = new News();
+        news.setTitle("图文消息标题");
+        news.setDescription("图文消息描述");
+        news.setPicUrl("https://mmbiz.qpic.cn/mmbiz_png/rtIbAJSiaf2JQSE24tB9gAibwHXvaCw7TZeOlsTicDibWgLtzJibbTRBgUjQ5hscmj7OVUeRBJobARNtqNWNBia4JGag/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1");
+        news.setUrl("www.baidu.com");
+
+        newsList.add(news);
+
+        newsMessage.setToUserName(fromUserName);
+        newsMessage.setFromUserName(toUserName);
+        newsMessage.setCreateTime(new Date().getTime());
+        newsMessage.setMsgType(MESSAGE_NEWS);
+        newsMessage.setArticles(newsList);
+        newsMessage.setArticleCount(newsList.size());
+        message = newsMessageToXml(newsMessage);
+        return message;
+    }
+
+    /**
      * 把文本内容转换为微信可识别的xml格式
      *
      * @param toUserName
@@ -95,7 +137,7 @@ public class MessageUtil {
     }
 
     /**
-     * 第一次订阅要发送的消息
+     * 初次订阅事件
      *
      * @return
      */
@@ -105,23 +147,16 @@ public class MessageUtil {
         return sb.toString();
     }
 
+    /**
+     * 简单的回复相同的内容
+     *
+     * @param content
+     * @return
+     */
     public static String echoWord(String content) {
         StringBuffer sb = new StringBuffer();
         sb.append("您发送的消息是：");
         sb.append(content);
         return sb.toString();
     }
-
-    public static String firstMenu() {
-        StringBuffer sb = new StringBuffer();
-        sb.append("您回复了1");
-        return sb.toString();
-    }
-
-    public static String secondMenu() {
-        StringBuffer sb = new StringBuffer();
-        sb.append("您回复了2");
-        return sb.toString();
-    }
-
 }

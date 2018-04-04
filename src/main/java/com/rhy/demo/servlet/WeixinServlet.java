@@ -42,19 +42,37 @@ public class WeixinServlet extends HttpServlet {
             String message = null;
             if (MessageUtil.MESSAGE_TEXT.equals(msgType)) {
                 if ("1".equals(content)) {
-                    message = MessageUtil.initText(toUserName, fromUserName, MessageUtil.firstMenu());
+                    message = MessageUtil.initNewsMessage(toUserName, fromUserName);
                 } else if ("2".equals(content)) {
-                    message = MessageUtil.initText(toUserName, fromUserName, MessageUtil.secondMenu());
+                    message = MessageUtil.initNewsMessage(toUserName, fromUserName);
                 } else if ("?".equals(content) || "？".equals(content)) {
                     message = MessageUtil.initText(toUserName, fromUserName, MessageUtil.menuText());
+                } else {
+                    // 简单的echo回复
+                    message = MessageUtil.initText(toUserName, fromUserName, MessageUtil.echoWord(content));
                 }
-                // 简单的echo回复
-                message = MessageUtil.initText(toUserName, fromUserName, MessageUtil.echoWord(content));
             } else if (MessageUtil.MESSAGE_EVENT.equals(msgType)) {
                 String eventType = map.get("Event");
+                int eventKey = Integer.parseInt(map.get("EventKey"));
+                System.out.println("eventType:" + eventType);
                 // 如果是订阅事件
                 if (MessageUtil.MESSAGE_SUBSCRIBE.equals(eventType)) {
                     message = MessageUtil.initText(toUserName, fromUserName, MessageUtil.subscribe());
+                } else if (MessageUtil.MESSAGE_CLICK.equals(eventType)) {
+                    String reply = null;
+                    if (eventKey == 11) {
+                        reply = "11";
+                    } else if (eventKey == 12) {
+                        reply = "12";
+                    } else if (eventKey == 33) {
+                        reply = "名称：苏州瑞华云财务共享科技有限公司\n" +
+                                "单位地址：苏州工业园区东长路88号G1栋1503室\n" +
+                                "电话号码：051265001666";
+                    }
+                    message = MessageUtil.initText(toUserName, fromUserName, reply);
+                } else if (MessageUtil.MESSAGE_VIEW.equals(eventType)) {
+                    String url = map.get("EventKey");
+                    message = MessageUtil.initText(toUserName, fromUserName, url);
                 }
             }
             System.out.println(message);
