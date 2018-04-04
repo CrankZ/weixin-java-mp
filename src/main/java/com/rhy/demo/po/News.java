@@ -1,6 +1,7 @@
 package com.rhy.demo.po;
 
 public class News {
+    // 不干净
     private String Title;
     private String Description;
     private String PicUrl;
