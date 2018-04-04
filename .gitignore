@@ -21,7 +21,6 @@
 *.rar
 
 # About IntelliJ
-*.iml
 .idea/
 out/
 
