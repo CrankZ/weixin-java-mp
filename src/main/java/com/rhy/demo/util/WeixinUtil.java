@@ -53,25 +53,25 @@ public class WeixinUtil {
         Menu menu = new Menu();
 
         // 菜单1
-        ClickButton button11 = new ClickButton();
+        ViewButton button11 = new ViewButton();
         button11.setName("外资咨询");
-        button11.setType("click");
-        button11.setKey("11");
+        button11.setType("view");
+        button11.setUrl("http://2f790b35.ngrok.io/consult.html");
 
-        ClickButton button12 = new ClickButton();
+
+        ViewButton button12 = new ViewButton();
         button12.setName("内资咨询");
-        button12.setType("click");
-        button12.setKey("12");
+        button12.setType("view");
+        button12.setUrl("http://2f790b35.ngrok.io/consult.html");
 
-        ClickButton button13 = new ClickButton();
+        ViewButton button13 = new ViewButton();
         button13.setName("资本事业部");
-        button13.setType("click");
-        button13.setKey("13");
+        button13.setType("view");
+        button13.setUrl("http://2f790b35.ngrok.io/consult.html");
 
         Button button1 = new Button();
         button1.setName("财税咨询");
         button1.setSub_button(new Button[]{button11, button12, button13});
-
 
         // 菜单2
         ViewButton button21 = new ViewButton();

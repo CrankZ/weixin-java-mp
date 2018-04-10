@@ -7,6 +7,6 @@ public class EmailTest {
 
     @Test
     public void Send() {
-        EmailUtil.SendEmail("标题","内容");
+        EmailUtil.SendEmail("标题","内容", "外资业务");
     }
 }

@@ -11,9 +11,22 @@ import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
 public class EmailUtil {
-    public static void SendEmail(String title, String content) {
+    public static void SendEmail(String title, String content,String sort) {
         // 收件人邮箱
-        String to = "songliang_zhu@rhyssc.com";
+
+        // 马辰辰,13771708872,chenchen_ma@rhyssc.com
+        // 王俊,18913106880,jun_wang@rhyssc.com
+        String to;
+        if (sort.equals("外资咨询")) {
+
+            to = "";
+        } else if (sort.equals("内资咨询")) {
+            to = "";
+        } else if (sort.equals("资本事业部")) {
+            to = "";
+        }
+        // TODO 暂时都发到我的邮箱
+        to = "songliang_zhu@rhyssc.com";
         // 发件人邮箱
         String from = "songliang_zhu@rhyssc.com";
         // 发件人邮箱密码
