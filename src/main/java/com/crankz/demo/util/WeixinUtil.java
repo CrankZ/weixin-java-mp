@@ -1,11 +1,11 @@
-package com.rhy.demo.util;
+package com.crankz.demo.util;
 
 import com.alibaba.fastjson.JSONObject;
-import com.rhy.demo.menu.Button;
-import com.rhy.demo.menu.ClickButton;
-import com.rhy.demo.menu.Menu;
-import com.rhy.demo.menu.ViewButton;
-import com.rhy.demo.po.AccessToken;
+import com.crankz.demo.menu.Button;
+import com.crankz.demo.menu.ClickButton;
+import com.crankz.demo.menu.Menu;
+import com.crankz.demo.menu.ViewButton;
+import com.crankz.demo.po.AccessToken;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -16,6 +16,10 @@ import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
 
+/**
+ * 主要修改菜单内容
+ * 这里修改完成后，必须在test类里执行WeixinTest里面的menuTest才能修改成功
+ */
 public class WeixinUtil {
     private static final String APPID = "wx6e2722059d43a84b";
     private static final String APPSECRET = "b0487ddf8a505125a8e8caec58d25f06";
@@ -49,6 +53,11 @@ public class WeixinUtil {
         return jsonObject;
     }
 
+    /**
+     * 初始化微信菜单
+     * 这里修改完成后，必须在test类里执行WeixinTest里面的menuTest才能修改成功
+     * @return
+     */
     public static Menu initMenu() {
         Menu menu = new Menu();
 
@@ -56,18 +65,18 @@ public class WeixinUtil {
         ViewButton button11 = new ViewButton();
         button11.setName("外资咨询");
         button11.setType("view");
-        button11.setUrl("http://2f790b35.ngrok.io/consult.html");
+        button11.setUrl("http://127.0.0.1/Weixin/consult.html");
 
 
         ViewButton button12 = new ViewButton();
         button12.setName("内资咨询");
         button12.setType("view");
-        button12.setUrl("http://2f790b35.ngrok.io/consult.html");
+        button12.setUrl("http://127.0.0.1/Weixin/consult.html");
 
         ViewButton button13 = new ViewButton();
         button13.setName("资本事业部");
         button13.setType("view");
-        button13.setUrl("http://2f790b35.ngrok.io/consult.html");
+        button13.setUrl("http://127.0.0.1/Weixin/consult.html");
 
         Button button1 = new Button();
         button1.setName("财税咨询");
@@ -77,7 +86,7 @@ public class WeixinUtil {
         ViewButton button21 = new ViewButton();
         button21.setName("服务内容");
         button21.setType("view");
-        button21.setUrl("https://mp.weixin.qq.com/s/reMIe-ffdHgOortA7s7VEg");
+        button21.setUrl("https://github.com/CrankZ");
 
         ClickButton button22 = new ClickButton();
         button22.setName("服务案例");
@@ -87,7 +96,7 @@ public class WeixinUtil {
         ViewButton button23 = new ViewButton();
         button23.setName("公司招聘");
         button23.setType("view");
-        button23.setUrl("http://company.zhaopin.com/CC513024887.htm");
+        button23.setUrl("https://github.com/CrankZ");
 
         Button button2 = new Button();
         button2.setName("公司业务");
@@ -97,12 +106,12 @@ public class WeixinUtil {
         ViewButton button31 = new ViewButton();
         button31.setName("公司简介");
         button31.setType("view");
-        button31.setUrl("https://mp.weixin.qq.com/s/4k0rBjvAgJHoG-8Gy2hpwg");
+        button31.setUrl("https://github.com/CrankZ");
 
         ViewButton button32 = new ViewButton();
         button32.setName("团队架构");
         button32.setType("view");
-        button32.setUrl("https://mp.weixin.qq.com/s/MJIFkohhyRyvjyPPf_LfzA");
+        button32.setUrl("https://github.com/CrankZ");
 
         ClickButton button33 = new ClickButton();
         button33.setName("联系我们");

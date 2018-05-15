@@ -1,4 +1,4 @@
-package com.rhy.demo.menu;
+package com.crankz.demo.menu;
 
 public class Button {
     private String type;

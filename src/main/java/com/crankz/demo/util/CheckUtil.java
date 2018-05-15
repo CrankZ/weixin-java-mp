@@ -1,10 +1,13 @@
-package com.rhy.demo.util;
+package com.crankz.demo.util;
 
 import java.security.MessageDigest;
 import java.util.Arrays;
 
+/**
+ * 微信接口验证
+ */
 public class CheckUtil {
-    private static final String token = "rhyWeixin";
+    private static final String token = "weixinToken";
 
     // 验证消息的确来自微信服务器
     public static boolean checkSignature(String signature, String timestamp, String nonce) {

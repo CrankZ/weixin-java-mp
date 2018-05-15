@@ -1,4 +1,4 @@
-package com.rhy.demo.po;
+package com.crankz.demo.po;
 
 /**
  * 用户咨询实体类

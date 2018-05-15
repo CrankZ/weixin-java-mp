@@ -1,4 +1,4 @@
-package com.rhy.demo.po;
+package com.crankz.demo.po;
 
 /**
  * 微信消息基础实体类

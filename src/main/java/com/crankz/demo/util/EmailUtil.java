@@ -1,4 +1,4 @@
-package com.rhy.demo.util;
+package com.crankz.demo.util;
 
 import com.sun.mail.util.MailSSLSocketFactory;
 
@@ -10,29 +10,28 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
+/**
+ * 邮件发送工具类
+ */
 public class EmailUtil {
     public static void SendEmail(String title, String content,String sort) {
         // 收件人邮箱
 
-        // 马辰辰,13771708872,chenchen_ma@rhyssc.com
-        // 王俊,18913106880,jun_wang@rhyssc.com
-        String to;
+        String to = "default@gmail.com";
+        // 根据选择的不同的类型，发送到不同人的邮箱
         if (sort.equals("外资咨询")) {
-
-            to = "";
+            to = "a@gmail.com";
         } else if (sort.equals("内资咨询")) {
-            to = "";
+            to = "b@gmail.com";
         } else if (sort.equals("资本事业部")) {
-            to = "";
+            to = "c@gmail.com";
         }
-        // TODO 暂时都发到我的邮箱
-        to = "songliang_zhu@rhyssc.com";
         // 发件人邮箱
-        String from = "songliang_zhu@rhyssc.com";
+        String from = "xx@xx.com";
         // 发件人邮箱密码
-        String password = "123456789R!";
+        String password = "123x";
         // host
-        String host = "smtp.mxhichina.com";
+        String host = "smtp.xx.com";
         // 设置邮箱服务器
         Properties props = new Properties();
 

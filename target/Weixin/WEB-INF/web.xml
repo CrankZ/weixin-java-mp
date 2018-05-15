@@ -3,13 +3,5 @@
         "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-    <servlet>
-        <servlet-name>weixinServlet</servlet-name>
-        <servlet-class>com.rhy.demo.servlet.WeixinServlet</servlet-class>
-    </servlet>
 
-    <servlet-mapping>
-        <servlet-name>weixinServlet</servlet-name>
-        <url-pattern>/wx.do</url-pattern>
-    </servlet-mapping>
 </web-app>

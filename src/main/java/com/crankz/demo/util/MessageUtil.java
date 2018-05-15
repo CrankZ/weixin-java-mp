@@ -1,8 +1,8 @@
-package com.rhy.demo.util;
+package com.crankz.demo.util;
 
-import com.rhy.demo.po.News;
-import com.rhy.demo.po.NewsMessage;
-import com.rhy.demo.po.TextMessage;
+import com.crankz.demo.po.News;
+import com.crankz.demo.po.NewsMessage;
+import com.crankz.demo.po.TextMessage;
 import com.thoughtworks.xstream.XStream;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -89,8 +89,8 @@ public class MessageUtil {
         News news = new News();
         news.setTitle("图文消息标题");
         news.setDescription("图文消息描述");
-        news.setPicUrl("https://mmbiz.qpic.cn/mmbiz_png/rtIbAJSiaf2JQSE24tB9gAibwHXvaCw7TZeOlsTicDibWgLtzJibbTRBgUjQ5hscmj7OVUeRBJobARNtqNWNBia4JGag/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1");
-        news.setUrl("www.baidu.com");
+        news.setPicUrl("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/03/GitHub-brave-hed-796x418.jpg");
+        news.setUrl("https://github.com/");
 
         newsList.add(news);
 

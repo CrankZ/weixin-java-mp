@@ -1,8 +1,8 @@
 package Util;
 
 import com.alibaba.fastjson.JSONObject;
-import com.rhy.demo.po.AccessToken;
-import com.rhy.demo.util.WeixinUtil;
+import com.crankz.demo.po.AccessToken;
+import com.crankz.demo.util.WeixinUtil;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;

@@ -1,6 +1,6 @@
 package Util;
 
-import com.rhy.demo.util.EmailUtil;
+import com.crankz.demo.util.EmailUtil;
 import org.junit.jupiter.api.Test;
 
 public class EmailTest {

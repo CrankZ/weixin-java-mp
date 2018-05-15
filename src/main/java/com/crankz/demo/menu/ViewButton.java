@@ -1,4 +1,4 @@
-package com.rhy.demo.menu;
+package com.crankz.demo.menu;
 
 public class ViewButton extends Button {
     private String url;

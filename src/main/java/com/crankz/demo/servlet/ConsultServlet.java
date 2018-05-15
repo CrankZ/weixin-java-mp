@@ -1,6 +1,6 @@
-package com.rhy.demo.servlet;
+package com.crankz.demo.servlet;
 
-import com.rhy.demo.util.EmailUtil;
+import com.crankz.demo.util.EmailUtil;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -30,7 +30,6 @@ public class ConsultServlet extends HttpServlet {
         resp.setContentType("text/html;charset=UTF-8");
 
         PrintWriter out = resp.getWriter();
-        // TODO不会自动关闭
-        out.println("<body onload='setTimeout(\"mm()\",3000)'>咨询成功，我们会尽快回复您<script>function mm(){window.opener=null;window.close();} </script></body>");
+        out.println("咨询成功，我们会尽快回复您");
     }
 }
