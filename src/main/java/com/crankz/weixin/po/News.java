@@ -1,4 +1,4 @@
-package com.crankz.demo.po;
+package com.crankz.weixin.po;
 
 public class News {
     // 图文

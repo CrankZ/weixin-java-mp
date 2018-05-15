@@ -1,6 +1,6 @@
-package com.crankz.demo.servlet;
+package com.crankz.weixin.servlet;
 
-import com.crankz.demo.util.EmailUtil;
+import com.crankz.weixin.util.EmailUtil;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

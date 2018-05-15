@@ -1,4 +1,4 @@
-package com.crankz.demo.menu;
+package com.crankz.weixin.menu;
 
 public class ViewButton extends Button {
     private String url;

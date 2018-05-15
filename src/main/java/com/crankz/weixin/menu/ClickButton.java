@@ -1,4 +1,4 @@
-package com.crankz.demo.menu;
+package com.crankz.weixin.menu;
 
 public class ClickButton extends  Button {
     private String key;

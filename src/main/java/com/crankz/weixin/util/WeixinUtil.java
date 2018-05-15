@@ -1,11 +1,11 @@
-package com.crankz.demo.util;
+package com.crankz.weixin.util;
 
 import com.alibaba.fastjson.JSONObject;
-import com.crankz.demo.menu.Button;
-import com.crankz.demo.menu.ClickButton;
-import com.crankz.demo.menu.Menu;
-import com.crankz.demo.menu.ViewButton;
-import com.crankz.demo.po.AccessToken;
+import com.crankz.weixin.menu.Button;
+import com.crankz.weixin.menu.ClickButton;
+import com.crankz.weixin.menu.Menu;
+import com.crankz.weixin.menu.ViewButton;
+import com.crankz.weixin.po.AccessToken;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;

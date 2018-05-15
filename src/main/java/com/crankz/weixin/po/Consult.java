@@ -1,4 +1,4 @@
-package com.crankz.demo.po;
+package com.crankz.weixin.po;
 
 /**
  * 用户咨询实体类

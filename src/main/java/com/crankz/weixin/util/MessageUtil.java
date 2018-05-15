@@ -1,8 +1,8 @@
-package com.crankz.demo.util;
+package com.crankz.weixin.util;
 
-import com.crankz.demo.po.News;
-import com.crankz.demo.po.NewsMessage;
-import com.crankz.demo.po.TextMessage;
+import com.crankz.weixin.po.News;
+import com.crankz.weixin.po.NewsMessage;
+import com.crankz.weixin.po.TextMessage;
 import com.thoughtworks.xstream.XStream;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;

@@ -1,4 +1,4 @@
-package com.crankz.demo.util;
+package com.crankz.weixin.util;
 
 import com.sun.mail.util.MailSSLSocketFactory;
 

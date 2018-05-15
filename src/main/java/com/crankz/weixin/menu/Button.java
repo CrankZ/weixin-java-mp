@@ -1,4 +1,4 @@
-package com.crankz.demo.menu;
+package com.crankz.weixin.menu;
 
 public class Button {
     private String type;

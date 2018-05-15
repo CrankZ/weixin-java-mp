@@ -1,4 +1,4 @@
-package com.crankz.demo.util;
+package com.crankz.weixin.util;
 
 import java.security.MessageDigest;
 import java.util.Arrays;

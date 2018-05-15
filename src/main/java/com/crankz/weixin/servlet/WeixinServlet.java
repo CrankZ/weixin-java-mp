@@ -1,7 +1,7 @@
-package com.crankz.demo.servlet;
+package com.crankz.weixin.servlet;
 
-import com.crankz.demo.util.CheckUtil;
-import com.crankz.demo.util.MessageUtil;
+import com.crankz.weixin.util.CheckUtil;
+import com.crankz.weixin.util.MessageUtil;
 import org.dom4j.DocumentException;
 
 import javax.servlet.annotation.WebServlet;

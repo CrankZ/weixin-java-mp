@@ -1,4 +1,4 @@
-package com.crankz.demo.po;
+package com.crankz.weixin.po;
 
 public class AccessToken {
     private String token;   // 获取到的凭证

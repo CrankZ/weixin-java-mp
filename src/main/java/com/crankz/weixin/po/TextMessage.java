@@ -1,4 +1,4 @@
-package com.crankz.demo.po;
+package com.crankz.weixin.po;
 
 public class TextMessage extends BaseMessage {
     private String PicUrl;  // 图片链接（由系统生成）
