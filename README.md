@@ -6,6 +6,11 @@
 4.内置咨询网页<br>
 5.内置邮件发送服务，咨询页面的内容会主动发送到相关负责人的邮箱<br>
 
+
+PS:可以去这里进行测试
+https://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&t=sandbox/index
+
 <img src="https://github.com/CrankZ/weixin-java-mp/raw/master/screenshots/Screenshot_2018-05-15-10-50-06-33.png" width="300"/></nobr>
 <img src="https://github.com/CrankZ/weixin-java-mp/raw/master/screenshots/Screenshot_2018-05-15-09-25-50-67.png" width="300"/></nobr>
 <img src="https://github.com/CrankZ/weixin-java-mp/raw/master/screenshots/Screenshot_2018-05-15-09-29-48-46.png" width="300"/></nobr>
+
