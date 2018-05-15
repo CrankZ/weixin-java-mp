@@ -21,8 +21,8 @@ import java.io.IOException;
  * 这里修改完成后，必须在test类里执行WeixinTest里面的menuTest才能修改成功
  */
 public class WeixinUtil {
-    private static final String APPID = "wx6e2722059d43a84b";
-    private static final String APPSECRET = "b0487ddf8a505125a8e8caec58d25f06";
+    private static final String APPID = "APPID";
+    private static final String APPSECRET = "APPSECRET";
     private static final String ACCESS_TOKEN_URL = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET";
     private static final String UPLOAD_URL = "";
     private static final String CREATE_MENU_URL = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN";

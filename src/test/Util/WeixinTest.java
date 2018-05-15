@@ -9,15 +9,9 @@ import java.io.IOException;
 
 public class WeixinTest {
 
-    @Test
-    public void getToken() throws IOException {
-        AccessToken token = WeixinUtil.getAccessToken();
-        System.out.println(token.getToken());
-        System.out.println(token.getExpiresIn());
-    }
-
     /**
      * 想要修改菜单必须先执行这个
+     *
      * @throws IOException
      */
     @Test
@@ -31,6 +25,14 @@ public class WeixinTest {
             System.out.println("错误码：" + result);
         }
     }
+
+    @Test
+    public void getToken() throws IOException {
+        AccessToken token = WeixinUtil.getAccessToken();
+        System.out.println(token.getToken());
+        System.out.println(token.getExpiresIn());
+    }
+
 
     @Test
     public void queryTest() throws IOException {

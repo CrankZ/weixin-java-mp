@@ -82,7 +82,7 @@ public class MessageUtil {
      * @return
      */
     public static String initNewsMessage(String toUserName, String fromUserName) {
-        String message = null;
+        String message;
         List<News> newsList = new ArrayList<News>();
         NewsMessage newsMessage = new NewsMessage();
 
